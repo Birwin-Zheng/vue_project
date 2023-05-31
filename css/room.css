@@ -1,0 +1,100 @@
+html, body {
+    /* border: 1px solid #666; */
+    /* font-family: 'Roboto';     */
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+  }
+  
+  body {
+    padding: 20px;
+  }
+
+  .room_col {
+    padding: 20px;
+  }
+
+  .col_room {
+    padding: 20px;
+  }
+
+  .room_container{
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  }
+
+  .room_container .cover {
+    height: 150px;
+    /* background-color: #eee; */
+    position: relative;
+    background-size: cover;
+    background-position: center center
+  }
+  
+  .room_container .cover h3 {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+    padding: 5px 15px;
+    background-color: #fff;
+  }
+  
+  .room_container .info {
+    padding: 10px;
+  }
+  
+  .room_container .info h5 {
+    font-size: 12px;
+  }
+  
+  .room_container .info .final_price {
+    float: right;
+    color: #DB4343;
+  }
+  
+  .room_container .info .final_price:after {
+    content: "$";
+  }
+
+  /* .room_container .info .icons {
+    display: inline-block;
+    margin-left: 10px;
+  } */
+
+  .room_container .info span {
+    margin-right: 5px;
+  }
+
+  .row h1{
+    font-size: 30px;
+  }
+
+  .row .col-edit {
+    height: 100vh;
+    overflow-y: scroll
+  }
+
+  .row .room_edit{
+    margin-top:30px;
+  }
+
+  .row .cursor_pointer{
+    margin-top:30px;
+  }
+  
+  .row .cursor_pointer{
+    cursor: pointer
+  }
+
+  .fa.fa-times {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .fa.fa-times:hover {
+    color: red;
+  }
+  

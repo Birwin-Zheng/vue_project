@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Vue_practice</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <link rel="stylesheet" href="./css/room.css">
+    <!-- <link rel="stylesheet" href="./css/room_v2.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- <div id="app">
+        <label>價錢</label>
+        <input v-model="roomdata.price">
+        <h1>房間的資料</h1>
+        <h2>名稱 {{ roomdata.name }}</h2>
+        <h2>價錢 {{ roomdata.price }}</h2>
+        <h3>最後的價錢 {{ final_price }}</h3>
+
+        <h1>房間列表</h1>
+        <ul>
+            <li v-for="room in rooms">{{ room.name }}</li>
+        </ul>
+    </div> -->
+    <div id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-edit">
+                    <h1>飯店資料</h1>
+                    <hr>
+                    <label class="form-label">總折數</label>
+                    <input class="form-control" v-model="discount">
+
+                    <label class="form-label">服務費</label>
+                    <input class="form-control" v-model="service_fee">
+
+                    <button type="button" class="btn btn-secondary room_edit" @click="addroom"> + 新增房間</button>
+
+                    <h1>房間編輯</h1>
+                    <select class="form-control" v-model="edit_id">
+                        <option v-for="(r, id) in rooms" :value="id">{{ r.name }}</option>
+                    </select>
+                    <hr />
+                    <div class="room_edit" v-for="(room, id) in [rooms[edit_id]]" v-if="room">
+                        <h4> {{ room.name }} </h4>
+                        
+                        <label>房間名稱</label>
+                        <span class="cursor_pointer" @click="delete_room(edit_id)">
+                            <i class="fa-solid fa-trash"></i></span>
+                        <input class="form-control" v-model="room.name">
+
+                        <label>價格</label>
+                        <input class="form-control" v-model="room.price">
+
+                        <label>折價</label>
+                        <input class="form-control" v-model="room.discount">
+
+                        <label>英文名稱</label>
+                        <input class="form-control" v-model="room.eng">
+
+                        <label>圖片網址</label>
+                        <input class="form-control" v-model="room.cover">
+
+                        <label>房間設備
+                            <label>早餐</label>
+                            <input class="form-check-input" type="checkbox" v-model="room.equipment.breakfast">
+
+                            <label>浴缸</label>
+                            <input class="form-check-input" type="checkbox" v-model="room.equipment.bathtub">
+
+                            <label>Wifi</label>
+                            <input class="form-check-input" type="checkbox" v-model="room.equipment.wifi">
+                        </label>
+                    </div>
+
+
+                </div>
+                <div class="col-sm-9">
+                    <h1>房間列表</h1>
+                    <hr>
+                    <row></row>
+                    <div class="row">
+                        <div class="col-sm-4 col_room" v-for="(myroom, id) in rooms">
+                            <room :room_data="myroom" :id="id" :hotel_discount="discount" :hotel_fee="service_fee"
+                                :delete_room="delete_room">
+                            </room>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <template id="room">
+        <div class="room_container">
+            <div class="cover" :style="bg_css">
+                <h3>{{ room_data.name }}</h3>
+                <i class="fa fa-times" aria-hidden="true" @click="delete_room(id)"></i>
+            </div>
+            <div class="info">
+                <h5> {{ room_data.eng }} </h5>
+                <div class="icons">
+                    <span v-if="room_data.equipment.breakfast"><i class="fa-solid fa-mug-saucer"></i></span>
+                    <span v-if="room_data.equipment.bathtub"><i class="fa-solid fa-bath"></i></span>
+                    <span v-if="room_data.equipment.wifi"><i class="fa-solid fa-wifi"></i></span>
+                </div>
+
+                <h5>{{ room_data.discount }}*{{ hotel_discount }} = {{ final_discount_show }}折</h5>
+                <h4>TWD:<del>{{room_data.price}}</del>
+                    <final_price class="final_price">{{final_price}}</final_price>
+                </h4>
+            </div>
+        </div>
+    </template>
+
+</body>
+<script src="js/room_data.js"></script>
+
+
+</html>
