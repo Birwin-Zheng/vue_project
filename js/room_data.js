@@ -5,7 +5,7 @@ var rooms = [
         "eng": "Economy Double Room",
         "price": 7000,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room%20(1).jpg",
+        "cover": "https://github.com/Birwin-Zheng/vue_project/blob/main/img/room%20(1).jpg",
         "discount": 0.9,
         "equipment": {
             "wifi": false,
