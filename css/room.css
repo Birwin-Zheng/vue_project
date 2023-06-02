@@ -70,7 +70,8 @@ html, body {
 
   .row .col-edit {
     height: 100vh;
-    overflow-y: scroll
+    overflow-y: scroll;
+    background-color: #f0dada;
   }
 
   .row .room_edit{
