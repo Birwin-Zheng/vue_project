@@ -5,7 +5,8 @@ var rooms = [
         "eng": "Economy Double Room",
         "price": 7000,
         "amount": 0,
-        "cover": "https://github.com/Birwin-Zheng/vue_project/blob/main/img/room%20(1).jpg",
+        // "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room%20(1).jpg",
+        "cover": "./img/room (1).jpg",
         "discount": 0.9,
         "equipment": {
             "wifi": false,
@@ -18,7 +19,7 @@ var rooms = [
         "eng": "Sea view triple Room",
         "price": 7800,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room%20(2).jpg",
+        "cover": "./img/room (2).jpg",
         "discount": 0.8,
         "equipment": {
             "wifi": true,
@@ -31,7 +32,7 @@ var rooms = [
         "eng": "Elegant landscape Room",
         "price": 5400,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room%20(3).jpg",
+        "cover": "./img/room (3).jpg",
         "discount": 0.85,
         "equipment": {
             "wifi": false,
@@ -44,7 +45,7 @@ var rooms = [
         "eng": "Exclusive Deluxe Room",
         "price": 9800,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room%20(4).jpg",
+        "cover": "./img/room (4).jpg",
         "discount": 0.8,
         "equipment": {
             "wifi": true,
@@ -57,7 +58,7 @@ var rooms = [
         "eng": "Business Double Room",
         "price": 5600,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room (5).jpg",
+        "cover": "./img/room (5).jpg",
         "discount": 0.9,
         "equipment": {
             "wifi": true,
@@ -70,7 +71,7 @@ var rooms = [
         "eng": "Hot spring double Room",
         "price": 8400,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room (6).jpg",
+        "cover": "./img/room (6).jpg",
         "discount": 0.6,
         "equipment": {
             "wifi": true,
@@ -83,7 +84,7 @@ var rooms = [
         "eng": "Presidential Suite",
         "price": 23000,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room (7).jpg",
+        "cover": "./img/room (7).jpg",
         "discount": 0.75,
         "equipment": {
             "wifi": true,
@@ -96,7 +97,7 @@ var rooms = [
         "eng": "Luxury four Room",
         "price": 8500,
         "amount": 0,
-        "cover": "http://bosscode.monoame.com/20170323_vue_comp/img/room (8).jpg",
+        "cover": "./img/room (8).jpg",
         "discount": 0.7,
         "equipment": {
             "wifi": true,
